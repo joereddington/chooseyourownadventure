@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Own Adventure - Scenario 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Gaming and Personal Safety</h1>
+        <div id="story" class="content">
+            <p>💬 You’ve been playing online with someone for a few months. They say they are your age and now they want to chat outside of the game on WhatsApp. They ask for your number. What do you do?</p>
+            <button onclick="showSection('A')">Give them your number – that seems harmless.</button>
+            <button onclick="showSection('B')">Ask them to stay on the game chat instead.</button>
+        </div>
+        
+        <div id="A" class="content hidden">
+            <ul>
+                <li>They message you on WhatsApp.</li>
+                <li>At first, they JUST  chat about the game.</li>
+                <li>But soon, they start asking more personal questions – where you live, what school you go to.</li>
+                <li>You start feeling uncomfortable.</li>
+                <li>Next step: what do you do now?</li>
+            </ul>
+            <button onclick="showSection('AA')">Keep chatting and answer their questions.</button>
+            <button onclick="showSection('AB')">Keep talking but avoid answering personal questions.</button>
+            <button onclick="showSection('AC')">Tell a trusted adult and block the person.</button>
+            <button onclick="showSection('story')">Back</button>
+        </div>
+        
+        <div id="AA" class="content hidden">
+            <ul>
+                <li>The conversations start to feel more personal, and they begin asking for selfies or voice messages.</li>
+                <li>You find out that they’re a bit older than they said at first. Then they start asking to meet up in person.</li>
+                <li>😬 You feel uncomfortable that they lied about their age.</li>
+                <li>🤔 Lesson: It’s easy for people to lie online. Be cautious with personal information.</li>
+                <li>🔄 Go back and choose again?</li>
+            </ul>
+            <button onclick="showSection('A')">Back</button>
+        </div>
+        
+        <div id="AB" class="content hidden">
+            <ul>
+                <li>You try to change the subject when they ask personal things.</li>
+                <li>They seem okay with it at first.</li>
+                <li>But then they start getting annoyed and pressuring you.</li>
+                <li>🤔 Lesson: If someone pressures you for personal details, that’s a 🚨 red flag.</li>
+                <li>🔄 Go back and choose again?</li>
+            </ul>
+            <button onclick="showSection('A')">Back</button>
+        </div>
+        
+        <div id="AC" class="content hidden">
+            <ul>
+                <li>You realise the conversation is making you uncomfortable and tell a trusted adult.</li>
+                <li>They help you block the number.</li>
+                <li>A few days later, the player’s account disappears from the game.</li>
+                <li>🎉 You made a safer choice!</li>
+                <li>🤔 Lesson: If something feels off, step away and talk to a trusted adult.</li>
+                <li>🔄 Go back and choose again?</li>
+            </ul>
+            <button onclick="showSection('A')">Back</button>
+        </div>
+    
+        <div id="B" class="content hidden">
+            <ul>
+                <li>You tell them you prefer to keep chatting in the game.</li>
+                <li>At first, they’re fine with it. But later, they start pushing again.</li>
+                <li>Now you feel pressured. What do you do?</li>
+                <li>Next step: what do you do now?</li>
+            </ul>
+            <button onclick="showSection('A')">Give in and share your number.</button>
+            <button onclick="showSection('BB')">Refuse to give your number.</button>
+            <button onclick="showSection('story')">Back</button>
+        </div>
+        
+        <div id="BB" class="content hidden">
+            <ul>
+                <li>They get annoyed and say you’re being paranoid.</li>
+                <li>They continue to pressure you to share your phone number.</li>
+                <li>When you refuse, they ask for other personal information.</li>
+                <li>Next step: what do you do now?</li>
+            </ul>
+            <button onclick="showSection('BBA')">Feel bad and message them again, sending your number.</button>
+            <button onclick="showSection('BBB')">Just stop talking to them and move on.</button>
+            <button onclick="showSection('BBC')">Report them and check your privacy settings.</button>
+            <button onclick="showSection('B')">Back</button>
+        </div>
+        <div id="BBA" class="content hidden">
+            <ul>
+                <li>You start feeling bad and message them again.</li>
+                <li>They reply immediately and start asking personal questions.</li>
+                <li>🤔 Lesson: If someone stops talking to you JUST  because you set boundaries, they may NOT have good intentions.</li>
+                <li>🔄 Go back and choose again? [between BBA, BBB, BBC]</li>
+            </ul>
+        </div>
+        <div id="BBB" class="content hidden">
+            <ul> <li>You don’t message them again.</li>
+        <li>Later, someone else asks for your number. Could it be the same person?</li>
+        <li>🎉 You made a safer choice.</li>
+        <li>🤔 Lesson: Learning from experience helps keep you safer online.</li>
+        <li>🔄 Go back and choose again? [between BBA, BBB, BBC]</li></ul>
+        </div>
+        <div id="BBC" class="content hidden">
+            <ul>
+         <li>You decide to report the player to the game’s moderators.</li>
+        <li>A few days later, the player’s account disappears.</li>
+        <li>🎉 Great decision! You helped protect others too!</li>
+        <li>🤔 Lesson: Reporting people who violate boundaries makes online spaces safer for everyone.</li>
+        </ul>
+        </div>
+    </div>
+    
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.content').forEach(div => div.classList.add('hidden'));
+            document.getElementById(section).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
+
