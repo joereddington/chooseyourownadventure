@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Own Adventure - Scenario 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Scenario 2</h1>
+        <div id="story" class="content">
+            <p>💬 Someone new comments on your post, complimenting your fashion style. You start chatting to them in a friendly way. After a few weeks, they suggest meeting up in person at a shopping centre. What do you do?</p>
+            <button onclick="showSection('A')">Say yes and agree to meet them alone.</button>
+            <button onclick="showSection('B')">Agree to meet but tell a trusted adult and bring someone with you.</button>
+        </div>
+        
+        <div id="A" class="content hidden">
+            <ul>
+                <li>You don’t tell anyone and arrange to meet them in a shopping centre.</li>
+                <li>When you arrive, you notice they look older than they said they were.</li>
+                <li>You feel like something isn’t right, but you’re already here.</li>
+                <li>Next step: what do you do now?</li>
+            </ul>
+            <button onclick="showSection('AA')">Stay and go ahead with the meeting.</button>
+            <button onclick="showSection('AB')">Make an excuse and leave.</button>
+            <button onclick="showSection('story')">Back</button>
+        </div>
+        
+        <div id="AA" class="content hidden">
+            <ul>
+                <li>You convince yourself you’re overreacting. They seem nice enough, so you start chatting.</li>
+                <li>After a while, they suggest going somewhere quieter, away from the crowd.</li>
+                <li>😬 Now you feel uncomfortable. You don’t want to leave the public shopping centre with them. You make up an excuse and leave.</li>
+                <li>🤔 Lesson: Meeting alone was a risky decision. If something feels off, it probably is. Never be afraid to leave a situation that makes you uncomfortable.</li>
+                <li>🔄 Go back and choose again?</li>
+            </ul>
+            <button onclick="showSection('A')">Back</button>
+        </div>
+        
+        <div id="AB" class="content hidden">
+            <ul>
+                <li>You feel something is off, so you say you have to leave and walk quickly toward a crowded area.</li>
+                <li>Later, you tell a friend what happened. They help you check the person’s profile again and you notice they do NOT have many tagged posts – this could be a 🚨 red flag.</li>
+                <li>🎉 You made a safer choice!</li>
+                <li>🤔 Lesson: Trusting your instincts was the responsible thing to do! Meeting alone is risky, and it’s always best to have a trusted adult aware of your plans.</li>
+                <li>🔄 Go back and choose again?</li>
+            </ul>
+            <button onclick="showSection('A')">Back</button>
+        </div>
+        
+        <div id="B" class="content hidden">
+            <ul>
+                <li>You ask a trusted adult like a parent or older sibling if it’s okay to meet up.</li>
+                <li>They suggest a safer approach: bringing someone with you and meeting in a public café instead of a quiet part of the shopping centre.</li>
+                <li>Your older sibling comes with you, and when you meet the person, they seem normal.</li>
+                <li>The meetup goes fine! But now they ask to hang out again – this time, JUST  the two of you.</li>
+                <li>Next step: what do you do now?</li>
+            </ul>
+            <button onclick="showSection('BA')">Say yes to the second meetup alone.</button>
+            <button onclick="showSection('BB')">Politely decline and suggest meeting in a group again.</button>
+            <button onclick="showSection('story')">Back</button>
+        </div>
+        
+        <div id="BA" class="content hidden">
+            <ul>
+                <li>They seemed fine the first time, so you agree to meet alone next time.</li>
+                <li>This time, they are more forward and ask personal questions – where you live, what time you’re usually home, if your parents work late.</li>
+                <li>😬 Now you feel uncomfortable. You don’t want to answer their questions. You make up an excuse and leave.</li>
+                <li>🤔 Lesson: Even if someone seems safe at first, you still don’t really know them. Some people who do NOT have good intentions may try to build trust first.</li>
+                <li>🔄 Go back and choose again?</li>
+            </ul>
+            <button onclick="showSection('B')">Back</button>
+        </div>
+        
+        <div id="BB" class="content hidden">
+            <ul>
+                <li>You say you’d rather keep meeting in a group.</li>
+                <li>If they respect that, great! But if they push you to meet alone, you say NO.</li>
+                <li>🤔 Lesson: If someone is pushing you to do something you aren’t comfortable with, that’s a 🚨 red flag. Real friends respect your boundaries.</li>
+                <li>Next step: what do you do now?</li>
+            </ul>
+            <button onclick="showSection('BBA')">Keep talking to them online anyway.</button>
+            <button onclick="showSection('BBB')">Stop talking to them and block them if necessary.</button>
+            <button onclick="showSection('B')">Back</button>
+        </div>
+        
+        <div id="BBA" class="content hidden">
+            <ul>
+                <li>You decide to keep chatting but avoid meeting in person.</li>
+                <li>They get upset that you do NOT want to meet up and blame you for being paranoid.</li>
+                <li>Over time, they start messaging you more, getting upset when you don’t reply quickly. They even start trying to call you.</li>
+                <li>They ask you to prove that they can trust you by sharing a secret and sending photos.</li>
+                <li>😬 The messages make you feel uncomfortable. You don’t want to answer their questions.</li>
+                <li>🤔 Lesson: If someone gets upset about your boundaries, that’s a 🚨 red flag. You don’t owe anyone your time, trust, or personal information.</li>
+                <li>🔄 Go back and choose again?</li>
+            </ul>
+            <button onclick="showSection('BB')">Back</button>
+        </div>
+    </div>
+    
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.content').forEach(div => div.classList.add('hidden'));
+            document.getElementById(section).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
+

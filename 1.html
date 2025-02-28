@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Own Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Scenario 1</h1>
+        <div id="story" class="content">
+            <p>💬 You receive a message from someone claiming to be a site moderator. They tell you your account is about to be banned due to a mix-up and urge you to click a link immediately to fix it. What do you do?</p>
+            <button onclick="showSection('A')">Click the link right away – this sounds serious!</button>
+            <button onclick="showSection('B')">Don’t click the link and instead check the site’s official help page.</button>
+        </div>
+        
+        <div id="A" class="content hidden">
+            <ul>
+                <li>The link takes you to a page that looks exactly like the real site’s login page. You enter your details and submit.</li>
+                <li>A few hours later, you try logging in, but your password doesn’t work.</li>
+            <li>😬 Oh NO! Your account has been hacked!
+            <li>🤔 Lesson: This was a phishing scam. The message pressured you to act fast, and the link led to a fake site. Urgent messages can be a 🚨 red flag. Always go directly to the real website instead of clicking links in messages. Never enter personal details on a page you didn’t navigate to yourself.
+            </ul>
+            <button onclick="showSection('AA')">Do nothing and hope it gets fixed on its own.</button>
+            <button onclick="showSection('AB')">Ask an adult for advice and try to reset your password.</button>
+            <button onclick="showSection('story')">Back</button>
+        </div>
+        
+        <div id="AA" class="content hidden">
+            <ul>
+                <li>Days go by and you still can’t log in.</li>
+                <li>You start hearing from friends that your account is sending weird messages. Some of your friends think you are scamming them!</li>
+            <li>😬 Now you’re NOT JUST  locked out – you’ve lost control of your online identity.</p>
+            <li>🔄 Go back and choose again?</p>
+            </ul>
+            <button onclick="showSection('A')">Back</button>
+        </div>
+        
+        <div id="AB" class="content hidden">
+            <ul>
+                <li>You tell a parent or teacher what happened. They help you visit the real website to try resetting your password.</li>
+                <li>Luckily, you had two-factor authentication enabled. You use this to regain access before too much damage is done.</li>
+                <li>You quickly change your password to something stronger and report the scam to the platform.</li>
+            <li>🎉 Success! You recovered your account! But what could have happened if the hacker had sent messages pretending to be you?</p>
+            <li>🤔 Lesson: Always think before clicking, and make sure your accounts have extra security like two-factor authentication.</p>
+            </ul>
+            <button onclick="showSection('A')">Back</button>
+        </div>
+        
+        <div id="B" class="content hidden">
+            <ul>
+                <li>You stop and think before clicking. You decide to check the site’s official help page.</li>
+                <li>It doesn’t have any alerts about this issue.</li>
+                <li>You message a friend to ask if they’ve had the same problem and they haven’t.</li>
+            <li>🚨 This is looking more and more like a phishing scam… but what now?</p>
+            </ul>
+            <button onclick="showSection('BA')">Ignore the message and move on.</button>
+            <button onclick="showSection('BB')">Report the message as a scam and warn others.</button>
+            <button onclick="showSection('story')">Back</button>
+        </div>
+        
+        <div id="BA" class="content hidden">
+            <ul>
+                <li>You don’t click the link, but you also don’t do anything else.</li>
+                <li>A few days later, the same account messages you again, this time with an even scarier warning.</li>
+            <li>🤔 Lesson: Scammers often try again if they think you might fall for their tricks.</p>
+            </ul>
+            <button onclick="showSection('B')">Back</button>
+        </div>
+        
+        <div id="BB" class="content hidden">
+            <ul>
+                <li>You report the scam message on the site.</li>
+                <li>Then you post on your group chat warning your friends that this scam is going around.</li>
+            <li>🎉 Smart move! You helped protect others too!</p> 
+            </ul>
+            <button onclick="showSection('BBA')">Do nothing else – you’ve already reported it.</button>
+            <button onclick="showSection('BBB')">Take extra steps to protect your account.</button>
+            <button onclick="showSection('B')">Back</button>
+        </div>
+         <div id="BBA" class="content hidden">
+                  <ul>
+                      <li>You feel good about reporting the scam, but you don’t change any of your own security settings.</li>
+                      <li>A week later, you get a similar scam message from a different account. This time, they claim your bank account is locked!</li>
+                      <li>🤔 Lesson: Scammers might target people based on weak security settings. Reporting scams is great, but securing your own accounts is even better. Changing passwords and enabling two-factor authentication can stop scammers from targeting you again.</li>
+                      <li>🔄 Go back and choose again?</li>
+                  </ul>
+                  <button onclick="showSection('BB')">Back</button>
+              </div>
+              
+              <div id="BBB" class="content hidden">
+                  <ul>
+                      <li>After reporting the scam, you decide to review your own account security.</li>
+                      <li>You enable two-factor authentication, making it much harder for someone to hack your account.</li>
+                      <li>You also change your account password to something stronger – one that’s different from any other accounts you use.</li>
+                      <li>🎉 Great decision! You’ve taken real action to protect yourself from future scams!</li>
+                      <li>🤔 Lesson: Scam prevention isn’t JUST  about avoiding scams! It’s also about making sure your accounts are as secure as possible. What else could you do to keep your personal information safe online?</li>
+                  </ul>
+                  <button onclick="showSection('BB')">Back</button>
+
+              </div>
+    </div>
+    
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.content').forEach(div => div.classList.add('hidden'));
+            document.getElementById(section).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
+
